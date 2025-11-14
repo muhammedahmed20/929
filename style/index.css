@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  .fly{
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: rotate(-45deg);
+    opacity: .2;
+    width: 200px;
+  }
+  .fly1{
+    position: absolute;
+    top: 75%;
+    left: -50px;
+    transform: rotate(45deg);
+    opacity: .3;
+    width: 200px;
+  }
+}
+
+.active-link{
+  background-color: #7b9f983f;
+  border-bottom:2px solid #7b9f98 !important;
+  
+}
+
+header {
+  /* border-bottom: 1px solid rgba(211, 211, 211, 0.377); */
+
+  .fa-square-facebook {
+    color: #1877f2;
+  }
+  .fa-square-instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  nav {
+    a {
+      position: relative;
+      transition: color 0.4s ease;
+      padding-bottom: 5px;
+      padding: 15px 5px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        border-radius: 50%;
+        background-color: #7b9f98;
+        transition: width 0.4s ease;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      &:hover {
+        color: #7b9f98 !important;
+      }
+    }
+  }
+
+  .offcanvas {
+    width: 150px; /* اضبط حسب اللي تحبه */
+    max-width: 50%; /* لو عايز يكون responsive */
+  }
+}
+
+.hero-box {
+  background-image: url(../assets/473074406_608259015222642_2133484893632941459_n.jpg);
+  background-size: cover;
+  background-position: 0% 93%;
+  border-radius: 20px;
+  @media screen and (max-width: 767px) {
+    border-radius: 0 !important;
+    
+    .overlay{
+      height: 500px !important;
+      border-radius: 0 !important;
+    }
+  }
+  
+  .overlay {
+    height: 500px !important;
+    background-color: rgba(0, 0, 0, 0.568);
+    border-radius: 20px;
+
+    h1 {
+      color: #f5f3f0;
+      font-size: 3rem;
+
+      @media screen and (max-width: 767px) {
+        font-size: 1.3rem;
+      }
+    }
+    p {
+      color: #ededed;
+      font-size: 1.5rem;
+
+      @media screen and (max-width: 767px) {
+        font-size: 0.7rem;
+      }
+    }
+    .btn-info {
+      background-color: #7b9f98 !important;
+      border-color: #7b9f98 !important;
+      color: #fff !important;
+
+      &:hover {
+        background-color: #5e8078 !important;
+        color: #fff !important;
+      }
+    }
+    .btn-outline-info {
+      border-color: #7b9f98 !important;
+      color: #7b9f98 !important;
+
+      &:hover {
+        background-color: #5e8078 !important;
+        color: #fff !important;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .btns .btn {
+        font-size: 0.85rem; /* يقلل حجم الخط */
+        padding: 0.4rem 0.9rem; /* يقلل البادينج */
+        border-radius: 5px; /* يخفف الزوايا */
+      }
+    }
+  }
+}
+
+section{
+  margin-bottom: 100px !important;
+}
+
+
+.card{
+    transition: all 0.3s ease;
+}
+  .card:hover{
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.192) !important;
+  }
+
+  .lower{
+
+    .star{
+    i{
+      font-size: 10px;
+    }
+  }
+  p{
+    font-size: 6px;
+  }
+  }
+
+  .carousel-control-next {
+    right: -25px !important;
+
+
+}
+  .carousel-control-prev {
+    left: -25px !important;
+}
+
+.main{
+height: 100vh;
+background-image: 
+  linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%),
+  url('../assets/480616323_635591575822719_767048317612317472_n.jpg');
+background-position: 0% 45%;
+background-size: cover;
+background-repeat: no-repeat;
+@media screen and (max-width: 767px) {
+  background-position: center;
+}
+}
+
+/* .branch-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+  .branch-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  .branch-header {
+    background-color: #fff;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .branch-img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .branch-info h5 {
+    font-weight: 600;
+    color: #222;
+  }
+  .branch-info p {
+    margin: 0;
+  }
+  .toggle-icon {
+    font-size: 22px;
+    color: #777;
+    transition: transform 0.3s ease;
+  }
+  .collapsed .toggle-icon {
+    transform: rotate(0);
+  }
+  .branch-header:not(.collapsed) .toggle-icon {
+    transform: rotate(180deg);
+    color: #198754;
+  } */
+
+  .branch-card {
+        border: 1px solid #e7e7e7;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease-in-out;
+      }
+      .branch-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .branch-header {
+        cursor: pointer;
+        background-color: #fff;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .branch-info h5 {
+        font-size: 0.95rem;
+        color: #222;
+      }
+      .branch-info p {
+        margin: 0;
+        font-size: 0.85rem;
+      }
+
+      .branch-img {
+        width: 85px;
+        height: 85px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .toggle-icon {
+        transition: transform 0.3s;
+        font-size: 1.2rem;
+      }
+      .branch-header[aria-expanded="true"] .toggle-icon {
+        transform: rotate(180deg);
+      }
+
+      iframe {
+        border: 0;
+        border-top: 1px solid #eee;
+        border-radius: 0 0 15px 15px;
+      }
+
+      /* ====== DIVIDER BETWEEN COUNTRIES ====== */
+      .country-divider {
+        border-top: 2px dashed #ddd;
+        margin: 50px 0;
+      }
+
+      @media (max-width: 767px) {
+        .branch-header {
+          text-align: center;
+          gap: 10px;
+        }
+      }
+
+        .branch-img {
+          width: 150px;
+          height: 100px;
+          @media (max-width: 767px) {
+          width: 100px;
+        }
+
+        .branch-info {
+          text-align: center;
+        }
+      }
+
+      .egypt{
+        border-right: 1px solid rgb(233, 232, 232);
+      }
